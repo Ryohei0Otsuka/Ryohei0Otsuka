@@ -1,8 +1,17 @@
-# Welcome to GitHub Desktop!
-name:Ryohei Otsuka
+# 👋 Ryohei Otsuka
 
-I'm beginner programmer.
+I'm a beginner web programmer from Japan.
 
 ## 🧠 Languages I use
 
-![](https://github-readme-stats.vercel.app/api/top-langs?username=Ryohei0Otsuka)
+![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=Ryohei0Otsuka&layout=compact)
+
+## 🛠 Tech Stack
+- PHP
+- JavaScript
+- HTML / CSS
+- MySQL
+
+## 📌 Projects
+- TaskTicket – Project-based task management app
+- CardNest – Business card management system
