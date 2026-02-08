@@ -6,7 +6,8 @@ I'm a beginner web programmer from Japan.
 
 ## 🧠 Languages I use
 
-![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=Ryohei0Otsuka&layout=compact)
+![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=Ryohei0Otsuka&layout=compact&cache_seconds=1800)
+
 
 ---
 
