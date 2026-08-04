@@ -1,43 +1,30 @@
-<div align="center">
+name: GitHub Profile Summary Cards
 
-<h1>Ryohei Otsuka</h1>
+on:
+  workflow_dispatch:
 
-<p>
-  <code>CLASS : WORKFLOW BUILDER</code>
-  &nbsp;&nbsp;
-  <code>STATUS : BUILDING</code>
-</p>
+  schedule:
+    # 毎日 日本時間 0:00
+    - cron: "0 15 * * *"
 
-<img
-  src="./profile-summary-card-output/github_dark/0-profile-details.svg"
-  width="100%"
-  alt="GitHub profile details"
-/>
+permissions:
+  contents: write
 
-<p>
-  <img
-    src="./profile-summary-card-output/github_dark/1-repos-per-language.svg"
-    width="49%"
-    alt="Repositories per language"
-  />
-  <img
-    src="./profile-summary-card-output/github_dark/2-most-commit-language.svg"
-    width="49%"
-    alt="Most commit language"
-  />
-</p>
+jobs:
+  build:
+    runs-on: ubuntu-latest
 
-<p>
-  <img
-    src="./profile-summary-card-output/github_dark/3-stats.svg"
-    width="49%"
-    alt="GitHub statistics"
-  />
-  <img
-    src="./profile-summary-card-output/github_dark/4-productive-time.svg"
-    width="49%"
-    alt="Productive time"
-  />
-</p>
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-</div>
+      - name: Generate profile summary cards
+        uses: vn7n24fzkq/github-profile-summary-cards@release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          USERNAME: Ryohei0Otsuka
+          BRANCH_NAME: main
+          UTC_OFFSET: 9
+          AUTO_PUSH: true
+          THEME: github_dark
